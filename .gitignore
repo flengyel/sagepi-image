@@ -1,6 +1,3 @@
-# runtime state (queue + logs)
-var/
-
 # local virtual environment
 .venv/
 
