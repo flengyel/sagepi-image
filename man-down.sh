@@ -24,8 +24,8 @@ if [[ -x "${SCRIPT_DIR}/.venv/bin/podman-compose" ]]; then
   PODMAN_COMPOSE="${SCRIPT_DIR}/.venv/bin/podman-compose"
 else
   if ! command -v podman-compose >/dev/null 2>&1; then
-    echo "podman-compose not found. If you haven't built the venv, run: ./venvfix.sh" >&2
-    echo "If you built it already, you can also: source bin/activate" >&2
+    echo "podman-compose not found. If you haven't built the venv, run: ./bin/venvfix.sh" >&2
+    echo "If you built it already, you can also: source .venv/bin/activate" >&2
     exit 127
   fi
   PODMAN_COMPOSE="podman-compose"
