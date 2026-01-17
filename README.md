@@ -3,7 +3,7 @@
 Build an ARM64-native SageMath 10.7 + `pycryptosat==5.11.21` container for Raspberry Pi 5.
 
 This repository:
-- builds the image used by **sagequeue** (tag compatibility is preserved), and
+- builds the image used by the companion **sagequeue** repository tag compatibility is preserved), and
 - serves as a standalone full-featured Sage container on the Pi (via `podman-compose.yml`, `man-up.sh`, `man-down.sh`, `run-bash.sh`).
 
 ## Compatibility contract (do not rename)
@@ -16,7 +16,7 @@ The running container name is:
 
 - `sagemath`
 
-## Determinism / audit hooks
+## Audit hooks
 
 Build args:
 - `SAGE_GIT_REF` (default: `10.7`)
@@ -42,7 +42,7 @@ The image build expects a CA bundle file in the build context:
 
 - `./host-ca-certificates.crt`
 
-Generate it deterministically from the host:
+Generated from the host:
 
 ```bash
 ./bin/copy-host-certs.sh
